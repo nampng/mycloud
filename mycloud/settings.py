@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'mycloud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cloud',
     }
 }
 
