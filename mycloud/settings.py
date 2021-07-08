@@ -78,7 +78,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db.mycloud',
-        'USER': 'root',
     }
 }
 
