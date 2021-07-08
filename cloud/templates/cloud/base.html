@@ -9,9 +9,21 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
 
+    <nav>
+        <h1><span>My</span>Cloud</h1>
+        <ul class="nav-bar">
+            <li class="nav-item"><a href="{% url 'index' %}">Home</a></li>
+            <li class="nav-item"><a href="{% url 'docs' %}">Docs</a></li>
+            <li class="nav-item"><a href="{% url 'pics' %}">Pics</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
     {% block scripts %}
     {% endblock %}
 </body>
