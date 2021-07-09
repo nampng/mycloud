@@ -1,0 +1,30 @@
+{% extends 'cloud/base.html '%}
+
+{% block title %}
+Cloud - Docs
+{% endblock %}
+
+{% block content %}
+    <form class="upload-form" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3>Upload a file:</h3>
+        <input type="file" name="uploaded_file">
+        <button type="submit" name="submit_file" value="submit">Upload</button>
+    </form>
+
+    <div class="container file-list">
+        {% if file_list %}
+        <h3>Files:</h3>
+        {% for file in file_list %}
+        <form class="file-container" action="" method="POST">
+            {% csrf_token %}
+            <p>{{file.name}}</p>
+            <button type="submit" class="btn download" name="download_file" value="dow{{file.id}}">Download</button>
+            <button type="submit" class="btn delete" name="delete_file" value="del{{file.id}}">Delete</button>
+        </form>
+        {% endfor %}
+        {% else %}
+        <h1>No files...</h1>
+        {% endif %}
+    </div>
+{% endblock %}

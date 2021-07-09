@@ -1,5 +1,4 @@
 {% extends 'cloud/base.html' %}
-{% load static %}
 
 {% block title %}
 Cloud
@@ -7,12 +6,10 @@ Cloud
 
 {% block content %}
     <h1>Welcome.</h1>
-    <h3>Total files stored: </p>
-        <div class="sub-container" id="total-files-bar"></div>
-    <h3>Recent files added: </p>
-        <div class="sub-container" id="recent-files-bar"></div>
-{% endblock %}
-
-{% block scripts %}
-<!-- <script src="{% static 'cloud/script.js' %}"></script> -->
+    <h3>Total files stored: </h3>
+    <h4>{{total_files}}</h4>
+    <h3>Recent files added: </h3>
+        <div class="sub-container" id="recent-files-bar">
+            
+        </div>
 {% endblock %}

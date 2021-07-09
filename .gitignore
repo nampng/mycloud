@@ -2,3 +2,4 @@ mycloud/settings-dev.py
 manage.py
 db.cloud
 __pycache__
+migrations
