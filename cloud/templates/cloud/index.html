@@ -8,8 +8,12 @@ Cloud
     <h1>Welcome.</h1>
     <h3>Total files stored: </h3>
     <h4>{{total_files}}</h4>
-    <h3>Recent files added: </h3>
-        <div class="sub-container" id="recent-files-bar">
-            
-        </div>
+    <h3>Most recent files: </h3>
+    {% if recent_files %}
+    {% for file in recent_files %}
+    <h4>{{file.name}}</h4>
+    {% endfor %}
+    {% else %}
+    <h4>No files...</h4>
+    {% endif %}
 {% endblock %}
