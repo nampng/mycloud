@@ -3,3 +3,4 @@ manage.py
 db.cloud
 __pycache__
 migrations
+mycloud/key.py
