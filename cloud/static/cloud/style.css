@@ -88,6 +88,7 @@ nav span {
 
 .upload-form input[type=file] {
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .upload-form button {
@@ -103,4 +104,45 @@ nav span {
     cursor: pointer;
     color: white;
     background-color: #777;
+}
+
+.file-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 10px 0;
+}
+
+.file-container .btn-container {
+    min-height: 100%;
+}
+
+.file-container .btn {
+    border: none;
+    margin: 0 10px;
+    height: 100%;
+}
+
+.file-container .btn.download {
+    background-color: #34eb71;
+    color: #000;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.file-container .btn.delete {
+    background-color: #eb3434;
+    color: #000;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.file-container .btn.download:hover {
+    cursor: pointer;
+    background-color: #1b7038;
+    color: white;
+}
+
+.file-container .btn.delete:hover {
+    cursor: pointer;
+    background-color: #661919;
+    color: white;
 }

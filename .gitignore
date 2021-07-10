@@ -1,6 +1,7 @@
 mycloud/settings-dev.py
 manage.py
 db.cloud
-__pycache__
+cloud/__pycache__
+mycloud/__pycache__
 migrations
 mycloud/key.py

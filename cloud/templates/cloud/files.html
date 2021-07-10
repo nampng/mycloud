@@ -19,8 +19,10 @@ Cloud - Files
         <form class="file-container" action="" method="POST">
             {% csrf_token %}
             <p>{{file.name}}</p>
-            <button type="submit" class="btn download" name="download_file" value="dow{{file.id}}">Download</button>
-            <button type="submit" class="btn delete" name="delete_file" value="del{{file.id}}">Delete</button>
+            <div class="btn-container">
+                <button type="submit" class="btn download" name="download_file" value="dow{{file.id}}">Download</button>
+                <button type="submit" class="btn delete" name="delete_file" value="del{{file.id}}">Delete</button>
+            </div>
         </form>
         {% endfor %}
         {% else %}

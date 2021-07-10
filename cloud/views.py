@@ -38,7 +38,8 @@ def files(response):
             print("Downloading file")
             file_id = response.POST["download_file"][3:]
             file = FileModel.objects.get(id=file_id)
-            with open(file.name, 'rb') as f:
+            file_path = "file_store/" + file.name
+            with open(file_path, 'rb') as f:
                 http_response = HttpResponse(f.read())
                 http_response['Content-Disposition'] = 'attachment; filename= ' + file.name
                 return http_response
